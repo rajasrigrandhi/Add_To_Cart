@@ -1,0 +1,163 @@
+<link href="cart.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+ 
+<div class="top">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.ZuSZzQ8zEHq5bzGEPbZzDQHaEK&pid=Api&P=0&h=180">
+    <div class="text">
+        <a href="#homeSection">Menu</a>
+        <a href="">About</a>
+        <a href="">Products</a>
+        <a href="">Contact Us</a>
+    </div>
+    <div class="cart">
+        <i class="fa-solid fa-cart-shopping"></i><span id="count">0</span>
+    </div>
+</div>
+
+<div class="second">
+    <div class="secondone">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://tse3.mm.bing.net/th?id=OIP.-e_PiXyy7JUI6SCDExQl4wHaFy&pid=Api&P=0&h=180"
+                  class="d-block w-100 h-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://tse3.mm.bing.net/th?id=OIP.ccBu-Qgi-DoLKHdYlQ43EgHaEo&pid=Api&P=0&h=180"
+                  class="d-block w-100 h-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://tse4.mm.bing.net/th?id=OIP.He9IBX1HeJA50AHfQQ3XCAHaEL&pid=Api&P=0&h=180"
+                  class="d-block w-100 h-100"
+          alt="..."
+        />
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+            </div> 
+    </div>
+</div>
+
+<div id="homeSection">
+<div class="third">
+    <div id="root"></div>
+    <div class="sidebar">
+        <h1>My Cart</h1>
+        <div id="cartItem">Your Cart Is Empty</div>
+        <div class="foot">
+            <h2 >Total</h2>
+            <h3 id="total">&#8377; 0.00</h3>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    const products=[
+        {id:0,
+            image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlxhAlYKs7hRIU9azK69Op5OMr7nsHwGVtrg&usqp=CAU",
+        name:"Rajasri",
+    title:"Good",
+quantity:3},
+{id:1,
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA_djpm0QdOAgvKxQhB3EZuT6JPHn1FcSDaw&usqp=CAU",
+        name:"Nani",
+    title:"Good",
+quantity:3},
+{id:2,
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNQkkHvUiirfbouyMRJzHs2zoDP7TYYL9bLA&usqp=CAU",
+        name:"Aishwarya",
+    title:"Good",
+quantity:3},
+{id:4,
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlxhAlYKs7hRIU9azK69Op5OMr7nsHwGVtrg&usqp=CAU",
+        name:"Surya",
+    title:"Good",
+quantity:3},
+{id:5,
+    image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKkfVKVpApeMzPbjiIRr0HBVxIE39xJg7wfg&usqp=CAU',
+        name:"Rajasri",
+    title:"Good",
+quantity:3},
+{id:6,
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_JwKYMDJJuWZVdzVfhHEo7JcCDHYROGM_zQ&usqp=CAU",
+        name:"Raj",
+    title:"Good",
+quantity:3},
+    ]
+
+    const category=[...new Set(products.map((item)=>{
+        return item;
+    }))]
+
+    let i=0;
+    document.getElementById("root").innerHTML=category.map((item)=>{
+        var{image, name, title, quantity}=item;
+        return(
+            `<div class="box">
+                <img src=${image}/>
+                <h2>${name}</h2>
+                <h3>${title}</h3>
+                <h4>${quantity}</h4>`+
+                "<button onclick='addcart("+(i++)+")'>Add To Cart</button>"+
+                `</div>`
+        )
+    }).join('')
+
+
+    var cart=[]
+    function addcart(a){
+        cart.push({...category[a]})
+        displaycart()
+    }
+    function delElement(a){
+        cart.splice(a, 1);
+        displaycart()
+    }
+    var cart=[]
+    function displaycart(a){
+        let j=0;total=0;
+        document.getElementById("count").innerHTML=cart.length
+        if(cart.length==0){
+            document.getElementById("cartItem").innerHTML="Your Cart Is Empty"
+            document.getElementById("total").innerHTML="&#8377; "+" 0.00"
+        }
+        else{
+            document.getElementById("cartItem").innerHTML=cart.map((items)=>{
+                var{image, name, title, quantity}=items
+                total=total+quantity
+                document.getElementById("total").innerHTML="&#8377;"+total+".00"
+                return(`
+                <div class="boxes">
+                    <img src=${image}/>
+                    <h2>${name}</h2>
+                    <h3>${title}</h3>
+                    <h4>${quantity}</h4>`+
+                    "<i class='fa-solid fa-trash' onclick='delElement("+(j++)+")'></i></div>")
+            }).join('')
+        }
+    }
+</script>

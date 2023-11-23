@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    padding-top: 22px;
+    
+}
+.top img{
+    height: 42px;
+    width: 113px;
+    margin-bottom: 9px;
+    margin-left: 10px;
+}
+.text{
+    margin-left: 165px;
+}
+.text a{
+    font-size: 23px;
+    margin-left: 50px;
+    color: red
+}
+.cart{
+    border: 1px solid;
+    height: 36px;
+    width: 59px;
+    margin-right: 22px;
+    border-radius: 9px;
+    padding: 2px;
+    background: yellow;
+    border: 0;
+
+}
+.cart i{
+    font-size: 24px;
+    color: darkgreen;
+}
+.cart span{
+    font-size: 23px;
+    margin-left: 7px;
+    color: red
+}
+.second{
+    
+    background-image: url("https://tse3.mm.bing.net/th?id=OIP.ocgIzDNGdjnTr2MErP0RSAHaFj&pid=Api&P=0&h=180");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 20px;
+}
+.secondone{
+    margin: 200px;
+    margin-top: 0px;
+
+}
